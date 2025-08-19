@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <title>Portfolio</title>
+</head>
+
+<body class="bg-yellow-50 text-red-900">
+
+
+<nav class="bg-red-900 text-white fixed top-0 left-0 right-0 z-50 shadow">
+  <div class="max-w-6xl mx-auto flex justify-between items-center px-6 py-4">
+
+    <h1 class="font-bold text-base sm:text-lg whitespace-nowrap">My E-Portfolio</h1>
+
+    <ul class="hidden md:flex space-x-4 text-sm md:text-base">
+      <li><a href="#home" class="hover:text-amber-300">Home</a></li>
+      <li><a href="#about" class="hover:text-amber-300">About</a></li>
+      <li><a href="#education" class="hover:text-amber-300">Education</a></li>
+      <li><a href="#skills" class="hover:text-amber-300">Skills</a></li>
+      <li><a href="#experience" class="hover:text-amber-300">Experience</a></li>
+      <li><a href="#certificates" class="hover:text-amber-300">Certificates</a></li>
+      <li><a href="#resume" class="hover:text-amber-300">Resume</a></li>
+    </ul>
+
+    <div class="md:hidden">
+      <button id="menu-btn" class="focus:outline-none">
+        <svg id="hamburger-icon" class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+        <svg id="close-icon" class="hidden w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 space-y-2">
+    <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-white/5 hover:text-amber-300">Home</a>
+    <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-white/5 hover:text-amber-300">About</a>
+    <a href="#education" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-white/5 hover:text-amber-300">Education</a>
+    <a href="#skills" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-white/5 hover:text-amber-300">Skills</a>
+    <a href="#experience" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-white/5 hover:text-amber-300">Experience</a>
+    <a href="#certificates" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-white/5 hover:text-amber-300">Certificates</a>
+    <a href="#resume" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-white/5 hover:text-amber-300">Resume</a>
+  </div>
+</nav>
+
+<script>
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const hamburgerIcon = document.getElementById('hamburger-icon');
+  const closeIcon = document.getElementById('close-icon');
+  const mobileLinks = mobileMenu.querySelectorAll('a'); 
+
+  menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+    hamburgerIcon.classList.toggle('hidden');
+    closeIcon.classList.toggle('hidden');
+  });
+
+  mobileLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.add('hidden');
+      hamburgerIcon.classList.remove('hidden');
+      closeIcon.classList.add('hidden');
+    });
+  });
+</script>
+
+
+<header id="home" class="bg-red-900 text-white min-h-screen flex flex-col md:flex-row justify-center items-center gap-6 px-6 pt-24">
+    <img src="JerlynPortrait.jpg" alt="Profile Photo"
+      class="w-40 h-40 md:w-56 md:h-56 rounded-full object-cover border-4 border-white">
+    
+    <div>
+      <h1 class="text-3xl md:text-4xl font-bold">Jerlyn Kenneth A. Sergio</h1>
+      <p class="mt-2">Bachelor of Science in Information Technology</p>
+      <p class="mt-2">Age: 21</p>
+      <p class="mt-2">Birth Date: August 21, 2003</p>      
+      <p class="mt-2">Address: Brgy. Estefania, Bacolod City, Negros Occidental</p>
+      <p class="mt-2">Contact No: +6399128926676</p>
+      <p class="mt-2">Email: sergio.203355@wnu.sti.edu.ph</p>
+    </div>
+</header>
+
+
+<section id="about" class="bg-white min-h-screen flex flex-col justify-center items-center text-center px-6">
+    <div class="max-w-3xl">
+      <h2 class="text-3xl font-bold text-red-900 mb-6">About Me</h2>
+      <p class="text-lg leading-relaxed">I am currently a 4th year IT student seeking opportunities to improve my
+        technical skills and gain professional experience. I focus on teamwork, communication, and project
+        coordination. I aim to grow in the IT industry by applying adaptability and continuous learning.</p>
+    </div>
+</section>
+
+
+<section id="education" class="bg-yellow-50 min-h-screen flex flex-col justify-center items-center px-6">
+  <div class="max-w-4xl w-full">
+    <h2 class="text-3xl font-bold text-red-900 mb-6 text-center">Education</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="bg-white border-l-4 border-red-900 p-6 rounded shadow hover:bg-yellow-100 transition">
+        <strong class="text-red-900 uppercase block">STI West Negros University</strong>
+        L. N. Agustin Drive, Bacolod City, Negros Occidental<br>
+        2023 - Present
+      </div>
+      
+      <div class="bg-white border-l-4 border-red-900 p-6 rounded shadow hover:bg-yellow-100 transition">
+        <strong class="text-red-900 uppercase block">Giljungan National High School</strong>
+        Brgy. Guiljungan, Cauayan, Negros Occidental<br>
+        2021 - 2023
+      </div>
+      
+      <div class="bg-white border-l-4 border-red-900 p-6 rounded shadow hover:bg-yellow-100 transition">
+        <strong class="text-red-900 uppercase block">Gil Montilla National High School - Binulig Extension</strong>
+        Brgy. San Jose, Sipalay City, Negros Occidental<br>
+        2017 - 2020
+      </div>
+      
+      <div class="bg-white border-l-4 border-red-900 p-6 rounded shadow hover:bg-yellow-100 transition">
+        <strong class="text-red-900 uppercase block">Cauayan Central Elementary School</strong>
+        Municipality of Cauayan, Negros Occidental<br>
+        2010 - 2016
+      </div>
+    
+    </div>
+  </div>
+</section>
+
+
+<section id="skills" class="bg-white min-h-screen flex flex-col justify-center items-center px-6">
+  <div class="max-w-4xl w-full">
+    <h2 class="text-3xl font-bold text-red-900 mb-6 text-center">Skills</h2>
+    <div class="space-y-6">
+
+      <div class="bg-yellow-50 border-l-4 border-red-900 p-6 rounded shadow hover:bg-yellow-100 transition">
+        <strong class="text-red-900 uppercase block">Technical Skills</strong>
+        <ul class="list-disc list-inside mt-2 text-gray-700">
+          <li>HTML</li>
+          <li>Tailwind CSS</li>
+          <li>MySQL</li>
+          <li>JavaScript</li>
+          <li>Microsoft Office</li>
+        </ul>
+      </div>
+
+      <div class="bg-yellow-50 border-l-4 border-red-900 p-6 rounded shadow hover:bg-yellow-100 transition">
+        <strong class="text-red-900 uppercase block">Soft Skills</strong>
+        <ul class="list-disc list-inside mt-2 text-gray-700">
+          <li>Communication</li>
+          <li>Teamwork</li>
+          <li>Time Management</li>
+          <li>Adaptability</li>
+          <li>Leadership</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="experience" class="bg-yellow-50 min-h-screen flex flex-col justify-center items-center px-6">
+  <div class="max-w-4xl w-full">
+    <h2 class="text-3xl font-bold text-red-900 mb-6 text-center">Experience</h2>
+    <div class="space-y-6">
+
+      <div class="bg-white border-l-4 border-red-900 p-6 rounded shadow hover:bg-yellow-100 transition">
+        <strong class="text-red-900 uppercase block">Floor Manager / Assistant Event Organizer</strong>
+        Jobancom Entertainment - Bacolod City, Philippines<br>
+        <span class="text-sm text-gray-600">2023 - Present</span>
+        <ul class="list-disc list-inside mt-2 text-gray-700">
+          <li>Supervised floor operations during events and performances.</li>
+          <li>Assisted in coordinating logistics, staff, and performers.</li>
+          <li>Ensured smooth execution of event schedules and guest satisfaction.</li>
+        </ul>
+      </div>
+
+      <div class="bg-white border-l-4 border-red-900 p-6 rounded shadow hover:bg-yellow-100 transition">
+        <strong class="text-red-900 uppercase block">Secretary & Team Manager</strong>
+        Mustang Esports - STIWNU, Bacolod City, Philippines<br>
+        <span class="text-sm text-gray-600">2022 - 2024</span>
+        <ul class="list-disc list-inside mt-2 text-gray-700">
+          <li>Managed scheduling, meetings, and communications for the esports team.</li>
+          <li>Coordinated team events, tournaments, and logistics.</li>
+          <li>Maintained records, documents, and team-related correspondence.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="certificates" class="bg-white min-h-screen flex flex-col justify-center items-center px-6">
+  <div class="max-w-4xl w-full">
+    <h2 class="text-3xl font-bold text-red-900 mb-6 text-center">Seminars & Certificates</h2>
+    <div class="space-y-6">
+
+      <div class="bg-yellow-50 border-l-4 border-red-900 p-6 rounded shadow hover:bg-yellow-100 transition">
+        <ul class="list-disc list-inside mt-2 text-gray-700">
+          <li>Certificate in Dean's lister S.Y. 2023 - 2025</li>
+        </ul>
+      </div>
+
+      <div class="bg-yellow-50 border-l-4 border-red-900 p-6 rounded shadow hover:bg-yellow-100 transition">
+        <ul class="list-disc list-inside mt-2 text-gray-700">
+          <li>Certificate of Participation in VORTEXT - Spiraling into the future of Blockchain and Gaming 2024</li>
+        </ul>
+      </div>
+
+      <div class="bg-yellow-50 border-l-4 border-red-900 p-6 rounded shadow hover:bg-yellow-100 transition">
+        <ul class="list-disc list-inside mt-2 text-gray-700">
+          <li>Certificate of Participation in Digital Arts - Creation of Vector Arts S.Y. 2022 - 2023</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="resume" class="bg-yellow-50 min-h-screen flex flex-col justify-center items-center px-6">
+    <div class="max-w-3xl text-center">
+      <h2 class="text-3xl font-bold text-red-900 mb-6">Resume</h2>
+      <a href="Resume.pdf" download
+        class="inline-block bg-red-900 text-white px-8 py-3 rounded shadow hover:bg-red-700 transition">Download
+        Resume</a>
+    </div>
+</section>
+
+
+<footer class="bg-red-900 text-white text-center py-6">
+    &copy; 2025 Jerlyn Kenneth A. Sergio. All Rights Reserved.
+</footer>
+
+</body>
+</html>
